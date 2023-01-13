@@ -4,7 +4,7 @@
 !/.magento.app.yaml
 !/.magento.env.yaml*
 !/.magento
-!/doker-compose.yaml
+!/docker-compose.yaml
 !/.magento/**
 /.magento/local
 !/app
