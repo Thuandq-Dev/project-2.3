@@ -1,0 +1,33 @@
+<?php
+/**
+ * @var \SM\Product\Block\Index $block
+ */
+$product = $block->getListProduct();
+?>
+
+<table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Type</th>
+        <th>Sku</th>
+        <th>Name</th>
+        <th>Thumbnail</th>
+        <th>Url Key</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <?php foreach ($product as $item): ?>
+        <tr>
+            <td><?= $item['entity_id']; ?></td>
+            <td><?= $item['type_id']; ?></td>
+            <td><?= $item['sku']; ?></td>
+            <td><?= $item['name']; ?></td>
+            <td>
+                <img src="/media/catalog/product<?= $item['thumbnail']; ?>" alt="Image">
+            </td>
+            <td><?= $item['url_key']; ?></td>
+            <td><?= $item['description']; ?></td>
+            <td>$<?= $item['price'] ?? 0; ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
